@@ -49,8 +49,7 @@
 
     <!-- jumbotron -->
     <section class="jumbotron text-center">
-      
-        <div class="container-fluid">
+        <div class="container">
       <div id="carouselExampleCaptions" class="carousel slide col-md-6 offset-lg-3" data-bs-ride="carousel">
         <div class="carousel-indicators">
           <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
@@ -90,9 +89,8 @@
         </button>
       </div>
     </div>
-  </div>
   <h1 class="display-4">HALO GAES</h1>
-  <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
+  <p class="lead"></p>
     </section>
     <!-- jumbotron selesai -->
 
@@ -239,6 +237,16 @@
     </script>
       <!-- aos -->
   
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.0/gsap.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.0/TextPlugin.min.js"></script>
+      <script>
+        gsap.registerPlugin(TextPlugin);
+        gsap.to('.lead',{duration:3,delay:2,text:"This is a simple website ya, jadi gini aja"})
+        gsap.from('.navbar',{duration: 1.5, y: '-100%', opacity: 0});
+        gsap.from('.display-4',{duration: 1, x: -50, opacity: 0, delay:1, ease:'back'});
+      </script>
+
+
     <script>
       const scriptURL = 'https://script.google.com/macros/s/AKfycbxgRRkIPJCBoePrbOwCj5pchd9pgiVjCX2x1MukuKrA7vg7QzxuSSl4cP93t48L74w/exec'
       const form = document.forms['kontak-form']
