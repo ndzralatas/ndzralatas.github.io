@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+
+    <!-- css -->
+    <link rel="stylesheet" href="style.css" />
+    <!-- tutup css -->
+
+    <title>Form Whatsapp</title>
+  </head>
+  <body>
+      <!-- navbar mulai -->
+    <div class="container">
+        <nav class="navbar navbar-expand-sm fixed-top navbar-dark bg-dark shadow">
+          <div class="container">
+            <a class="navbar-brand" href="#">HOME PRODUCTION</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+              <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="#">Home</a>
+                </li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </div>
+          </div>
+        </nav>
+        <!-- navbar selesai -->
+        <!-- form wa -->
+        <section class="jumbotron">
+        <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-6 ju">
+                <div class="mb-3">
+                    <form action="kirimwa.php" method="POST" target="_blank">
+                    <label for="nama" class="form-label">Name</label>
+                    <input type="text" class="form-control" name="name">
+                  </div>
+                <div class="mb-3">
+                    <label for="email" class="form-label">Email address</label>
+                    <input type="email" class="form-control" name="email">
+                  </div>
+                  <div class="mb-3">
+                  <label for="purpose" class="form-label">Purpose</label>
+                  <select class="form-select" id="pilihan" onchange="opsi()" aria-label="Default select example">
+                    <option selected disabled value="0" name="opsi">Choose...</option>
+                    <option value="Asking a Price" >Asking a Price</option>
+                    <option value="Join With OLDman" >Join With OLDman</option>
+                  </select>
+                </div>
+                  <div class="mb-3">
+                    <label for="message" class="form-label">Message</label>
+                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="message"></textarea>
+                  </div>
+                  <input type="hidden" name="pilih" id="pilih">
+                  <input type="hidden" name="nowa" value="6281286475700">
+                  <button type="submit" class="btn btn-primary btn-kirim">Send</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+        <!-- form wa finish -->
+    <!-- js -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <!-- bs -->
+
+    <!-- js opsi -->
+    <script type="text/javascript">
+    function opsi() {
+      var data = document.getElementById("pilihan").value;
+      document.getElementById("pilih").value=data;
+    }
+    </script>  
+    <!-- akhir js -->
+  </body>
+</html>
