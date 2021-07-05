@@ -7,7 +7,7 @@
     <title>Document</title>
 </head>
 <body>
-    <form action="kirimwa.php" method="POST">
+    <form action="kirimwa.php" method="GET">
     nama
     <input type="text" name="nama">
     email 
