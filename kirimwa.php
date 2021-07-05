@@ -1,10 +1,10 @@
 <?php 
-if (isset($_GET['submit'])) {
-    $name = $_GET['name'];
-    $email = $_GET['email'];
-    $pilih = $_GET['pilih'];
-    $message = $_GET['message'];
-    $nowa = $_GET['nowa'];
+if (isset($_POST['submit'])) {
+    $name = $_POST['name'];
+    $email = $_POST['email'];
+    $pilih = $_POST['pilih'];
+    $message = $_POST['message'];
+    $nowa = $_POST['nowa'];
     header("location:https://api.whatsapp.com/send?phone=$nowa&text=berhasil");
 }
 ?>
